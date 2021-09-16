@@ -1,12 +1,25 @@
 .color-container {
   display: grid;
-  grid-template-columns: repeat(6, 200px);
+  width: 100%;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-gap: 15px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+body {
+  box-sizing: border-box;
 }
 
 .card {
-  width: 200px;
+  width: 90%;
   height: 200px;
-  border: 1px solid black;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: 0.1s ease;
+}
+.card:hover {
+  transform: scale(1.05);
 }
 
 .green {
@@ -31,4 +44,10 @@
 
 .red {
   background-color: red;
+}
+
+input {
+  border-radius: 300px;
+  border: 1px solid gray;
+  padding: 10px;
 }
